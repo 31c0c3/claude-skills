@@ -22,6 +22,11 @@ Closing loses the chat; files and commits stay.
    **Session:** one line: what it was about and what got done.
    **Left:** each loose end, costliest to lose first: what it is and the
    action that closes it. Omit it when there's none.
-   **Bottom line:** safe to close, or what to close first.
+   **Bottom line:** the verdict alone, on its own line after a blank line,
+   exactly one of:
+   - `✓ Safe to close`
+   - `✗ Not safe to close: <loose ends, a few words each>`
+
+   Reasons and checks behind the verdict go in Session or Left.
 3. On my yes, close them in order; a follow-up I defer goes to the repo's
    `TODO.md`. Then reply again in step 2's shape.
