@@ -25,7 +25,8 @@ plans.
      drop. Drop is the default.
 3. Hunt the **sediment**: lines this session made stale, such as a fixed bug,
    a renamed file or a plan now done. Fix or delete them; one corrected line
-   beats three new ones.
+   beats three new ones. Done when every file this session changed, and
+   each doc that names one, is checked.
 4. Propose only what's **to add** or **to fix** (sediment), most valuable
    first: likeliest to recur, costliest when it does. Each in plain words,
    readable without the diff: the idea and its home in bold, why it's worth

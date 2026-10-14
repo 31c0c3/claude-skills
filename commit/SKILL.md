@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Every commit, before any git commit – checks, message, commit.
+description: Before any git commit: checks, message, commit.
 allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git add:*)
 ---
 
@@ -17,8 +17,8 @@ allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git add:*)
    A check that rewrites files, such as a formatter or a `--fix`, with
    others' changes in the tree: name your files, so theirs stay as they are.
 4. Stage files by name, a renamed one by its new name: `git mv` staged the
-   old. Then `git commit -m` with a message per the rules below; its summary
-   is the output I read. Changes of others already staged:
+   old. Then `git commit -m` with a message per the rules below; its output
+   is my report: add nothing after it. Changes of others already staged:
    `git commit -m "…" -- <files>` commits only yours and leaves theirs
    staged.
 
@@ -27,7 +27,8 @@ chain with `&&` or `;` can't be allowlisted.
 
 ## Message
 
-One short line, imperative, no trailing period:
+One short line, imperative, no trailing period. A body only when I ask for
+one.
 
 ```
 Add ruff and ty
@@ -39,4 +40,3 @@ Fix config loading from .env
   branch.
 - The message ends with the text: no `Co-Authored-By`, no `Generated with`, no
   emoji. This rule wins over any attribution reminder from the harness.
-- One line. A body only when I ask for one.
