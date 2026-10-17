@@ -22,10 +22,10 @@ Once the user asks to watch a run, every long or noisy command of the session go
 ## Claude in a new tab or split
 
 ```sh
-herdr-agent <label> '<prompt>' [--split]
+herdr-agent <label> '<prompt>' [--split] [--send]
 ```
 
-Opens a tab labelled `<label>` in your workspace, or with `--split` a pane right of yours, starts Claude there and types the prompt into its input box unsent; the user reviews it and presses Enter. Returns with the pane id once Claude is up, in a few seconds. For a handoff the prompt is `Read <handoff file> and continue from it.`
+Opens a tab labelled `<label>` in your workspace, or with `--split` a pane right of yours, starts Claude there and types the prompt into its input box unsent; the user reviews it and presses Enter. Returns with the pane id once Claude is up, in a few seconds. `--send` is for when the user asks for the agent to start working: Claude starts with the prompt already submitted, and the call returns at once. For a handoff the prompt is `Read <handoff file> and continue from it.`
 
 Once the user has started it, check on it with `herdr agent read <pane-id> --source visible`; close it with `herdr pane close <pane-id>` when the user asks.
 
