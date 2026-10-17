@@ -1,6 +1,6 @@
 ---
 name: herdr-run
-description: Run in Herdr: a command in the right pane (herdr-exec), or Claude in a new tab or split (handoff, reviewer). Load it before the full herdr skill, which covers the rest.
+description: Inside Herdr (HERDR_ENV=1): a command in the right pane (herdr-exec), or Claude in a new tab or split (handoff, reviewer). Load it before the full herdr skill, which covers the rest.
 ---
 
 # Herdr run
