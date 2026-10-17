@@ -35,4 +35,4 @@ Sessions, workspaces, renames, moving panes, driving an existing agent: load the
 
 ## Editing the scripts
 
-Both live in `~/Library/Mobile Documents/com~apple~CloudDocs/Productivity/`. After an edit, reinstall from there: `install -m 755 herdr-exec herdr-agent ~/.local/bin/`.
+Both live in `~/Library/Mobile Documents/com~apple~CloudDocs/Productivity/`, symlinked from `~/.local/bin/`, so an edit there is live at once.
