@@ -18,6 +18,7 @@ Once the user asks to watch a run, every long or noisy command of the session go
 - A run that may take over 2 minutes: Bash `run_in_background: true`, and its exit arrives as a notification.
 - While the pane is busy, a run goes to your own shell instead and its output starts with `(<pane> busy: ran here)`. Tell the user it ran unseen.
 - The pane is narrow: one step per call, relative paths.
+- A script you write for the pane prints a short line before each slow step (`flush=True` in Python), so the user sees it working, and one item per line to fit the pane, addresses in full. A filter piped after it flushes per line too, as `grep --line-buffered`: into `herdr-exec`'s pipe a plain one holds every line until the run ends.
 
 ## Claude in a new tab or split
 
