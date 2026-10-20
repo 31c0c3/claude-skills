@@ -1,6 +1,6 @@
 ---
 name: herdr-run
-description: Inside Herdr (HERDR_ENV=1): a command in the right pane (herdr-exec), or Claude in a new tab or split (handoff, reviewer). Load it before the full herdr skill, which covers the rest.
+description: Inside Herdr (HERDR_ENV=1): a command in the right pane (herdr-exec), or Claude in a new tab or split (a reviewer). Load it before the full herdr skill, which covers the rest.
 ---
 
 # Herdr run
@@ -26,7 +26,7 @@ Once the user asks to watch a run, every long or noisy command of the session go
 herdr-agent <label> '<prompt>' [--split] [--send]
 ```
 
-Opens a tab labelled `<label>` in your workspace, or with `--split` a pane right of yours, starts Claude there and types the prompt into its input box unsent; the user reviews it and presses Enter. Returns with the pane id once Claude is up, in a few seconds. `--send` is for when the user asks for the agent to start working: Claude starts with the prompt already submitted, and the call returns at once. For a handoff the prompt is `Read <handoff file> and continue from it.`
+Opens a tab labelled `<label>` in your workspace, or with `--split` a pane right of yours, starts Claude there and types the prompt into its input box unsent; the user reviews it and presses Enter. Returns with the pane id once Claude is up, in a few seconds. `--send` is for when the user asks for the agent to start working: Claude starts with the prompt already submitted, and the call returns at once.
 
 Once the user has started it, check on it with `herdr agent read <pane-id> --source visible`; close it with `herdr pane close <pane-id>` when the user asks.
 
